@@ -49,7 +49,7 @@ class BaykarKariyerUserBehavior(SequentialTaskSet):
                 "username": "testuser", ##
                 "password": "testpass"
             }
-            with self.client.post("/hesaplar/login/",name="Login", data=payload, allow_redirects=True, catch_response=True) as response:
+            with self.client.post("/hesaplar/login/",name="Login Baykartech", data=payload, allow_redirects=True, catch_response=True) as response:
                 if response.status_code == 200 and "/tr/dashboard" in response.url:
                     response.success()
                     logger.info("Login işlemi başarılı.")
